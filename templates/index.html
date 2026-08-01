@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal AI assistant</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+</head>
+<body>
+    <h1 class="main-heading">Personal AI Assistant </h1>
+
+    <div class="container">
+        <h2>Ask your query!!</h2>
+        <form action="" id="askform">
+            <input type="text" name="question" id="" placeholder="Ask anything...." required>
+            <button type="submit">Submit</button>
+        </form>
+
+        <p id="ask-loading" style="display: none;">Wait few seconds.....</p>
+        <p id="answer"></p>
+
+        <hr>
+        <h2>Email sumamrization!!</h2>
+        <form action="" id="email-form">
+            <textarea type="text" name="email" id="" placeholder="Paste your email.." required></textarea>
+            <button type="submit">Summarize</button>
+        </form>
+
+        <p id="email-loading" style="display: none;">Your email is being summarized....</p>
+        <p id="summary"></p>
+    </div>
+</body>
+</html>
