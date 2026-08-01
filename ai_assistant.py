@@ -7,9 +7,9 @@ class PersonalAssistant:
         self.client = get_groq_client()
         print("Hi, I am your AI assistant ... How can i help you?")
 
-    def ans_query(self):
+    def ans_query(self,question):
 
-        question = input("Ask me anything:")
+       
         chat_completion = client.chat.completions.create(
             model = "llama-3.3-70b-versatile",
             messages = [
@@ -29,9 +29,8 @@ class PersonalAssistant:
 
 
     #for email summarization
-    def summarize_email(self):
-        print("Paste your email here:")
-        email_text = input()
+    def summarize_email(self,email_text):
+        
         prompt = f"summarize the following emial in 2-3 sentences:{email_text}"
 
         chat_completion = client.chat.completions.create(
