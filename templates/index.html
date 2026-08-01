@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal AI assistant</title>
     <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
 </head>
 <body>
     <h1 class="main-heading">Personal AI Assistant </h1>
@@ -16,7 +17,7 @@
             <button type="submit">Submit</button>
         </form>
 
-        <p id="ask-loading" style="display: none;">Wait few seconds.....</p>
+        <p id="ans-loading" style="display:none;">Wait few seconds.....</p>
         <p id="answer"></p>
 
         <hr>
@@ -26,7 +27,7 @@
             <button type="submit">Summarize</button>
         </form>
 
-        <p id="email-loading" style="display: none;">Your email is being summarized....</p>
+        <p id="summary-loading" style="display:none;">Your email is being summarized....</p>
         <p id="summary"></p>
     </div>
 </body>

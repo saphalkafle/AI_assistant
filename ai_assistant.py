@@ -25,7 +25,7 @@ class PersonalAssistant:
             temperature = 0.7,
             max_tokens = 1024
         )
-        print(chat_completion.choices[0].message.content.strip())
+        return chat_completion.choices[0].message.content.strip()
 
 
     #for email summarization
@@ -48,4 +48,4 @@ class PersonalAssistant:
             temperature = 0.3,
             max_tokens = 1024
         )
-        print(chat_completion.choices[0].message.content.strip())
+        return chat_completion.choices[0].message.content.strip()
