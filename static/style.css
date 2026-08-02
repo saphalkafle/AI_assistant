@@ -96,3 +96,30 @@ hr {
     border: none;
     border-top: 1px solid #eee;
 }
+#answer {
+    line-height: 1.6;
+}
+
+#answer h1,
+#answer h2,
+#answer h3 {
+    color: #2c3e50;
+}
+
+#answer code {
+    background: #f4f4f4;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+#answer pre {
+    background: #1e1e1e;
+    color: white;
+    padding: 10px;
+    overflow-x: auto;
+    border-radius: 6px;
+}
+
+#answer ul {
+    padding-left: 20px;
+}

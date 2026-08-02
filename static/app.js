@@ -1,4 +1,5 @@
-document.getElementById('askform').onsubmit = async(e) => {
+onload=()=>{
+    document.getElementById('askform').onsubmit = async(e) => {
     e.preventDefault();
     let formData = new FormData(e.target);
 
@@ -11,13 +12,10 @@ document.getElementById('askform').onsubmit = async(e) => {
     });
 
     let data = await res.json();
-    document.getElementById("answer").innerText = data.answer;
+    document.getElementById("answer").innerText = data.response;
 
     loading.style.display = "none"; //hide loader
-};
-
-
-
+}
 
 document.getElementById('email-form').onsubmit = async(e) => {
     e.preventDefault();
@@ -32,7 +30,8 @@ document.getElementById('email-form').onsubmit = async(e) => {
     });
 
     let data = await res.json();
-    document.getElementById("summary").innerText = data.summary;
+    document.getElementById("summary").innerText = data.response;
 
     loading.style.display = "none"; //hide loader
 };
+}

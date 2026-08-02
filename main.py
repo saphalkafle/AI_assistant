@@ -1,4 +1,5 @@
 from flask import Flask,render_template,request,jsonify
+
 from ai_assistant import PersonalAssistant
 
 
@@ -7,7 +8,7 @@ app= Flask(__name__)
 assistant = PersonalAssistant()
 
 @app.route("/")
-def hello_world():
+def rendering():
     return render_template("index.html")
 
 @app.route("/ask",methods=["POST"])
@@ -18,6 +19,7 @@ def ask():
         return jsonify({"error": "Question is required"}),400
 
     answer = assistant.ans_query(question)
+    print(answer)
     return jsonify ({"response": answer}) , 200
 
 @app.route("/summarize",methods=["POST"])

@@ -15,17 +15,19 @@ class PersonalAssistant:
             messages = [
                 {
                     "role":"system",
-                    "content": "Act as a helpful assistant"
+                    "content": "Act as a helpful assistant and answer the question in a detailed manner"
                 },
                 {
                     "role":"user",
                     "content":question
                 }
             ],
-            temperature = 0.7,
-            max_tokens = 1024
+            # temperature = 0.7,
+            # max_tokens = 1024
         )
-        return chat_completion.choices[0].message.content.strip()
+        response = chat_completion.choices[0].message.content.strip()
+        print(response)
+        return response
 
 
     #for email summarization
